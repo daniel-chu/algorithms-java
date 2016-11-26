@@ -7,7 +7,8 @@ package stockprofit;
 public class MaxStockProfit {
 
   public static void main(String[] args) {
-    // array representing stock prices over a period of time
+
+    // array representing stock prices over a period of time. ENTER ARRAY HERE:
     int[] list = {14, 4, 2, 17, 3, 20};
 
     int curBuyDate = 0;

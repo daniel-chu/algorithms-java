@@ -6,7 +6,11 @@ import java.util.Scanner;
 /**
  * Represents the main runner class. Allows user to input a latin square number by number. The
  * number of inputs must be a square number to be a valid latin square (and for this to work
- * correctly).
+ * correctly). Enter 0 for a blank square. Command + D when done entering. Example square below:
+ *   1  0  3
+ *   0  0  0
+ *   2  0  0
+ *   ^D
  */
 public class LatinSquareRunner {
 
