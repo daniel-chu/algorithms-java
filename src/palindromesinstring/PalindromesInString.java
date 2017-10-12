@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Gets a list of all palindromes in a given string in linear time.
+ * Gets a list of all palindromes in a given string in linear (correction: this is actually n^2) time.
  */
 public class PalindromesInString {
 
