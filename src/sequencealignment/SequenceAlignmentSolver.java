@@ -113,4 +113,11 @@ public class SequenceAlignmentSolver {
     }
   }
 
+  /**
+   * Gets the cache (for printing purposes).
+   */
+  public int[][] getCache() {
+    return cache;
+  }
+
 }
