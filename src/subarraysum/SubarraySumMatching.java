@@ -16,19 +16,26 @@ public class SubarraySumMatching {
     int start = 0;
     int end = 0;
     int curSum = arr[start];
-    while(end < arr.length) {
+    while(end < arr.length && start < arr.length) {
       if(curSum == sum) {
         return ++start + " " + ++end;
       } else if(curSum > sum) {
         if(start == end) {
-          ++end;
-          curSum = arr[++start];
-          continue;
+          if(start < arr.length - 1) {
+            ++end;
+            curSum = arr[++start];
+          } else {
+            break;
+          }
         } else {
           curSum = curSum - arr[start++];
         }
       } else {
-        curSum = curSum + arr[++end];
+        if(end < arr.length - 1) {
+          curSum = curSum + arr[++end];
+        } else {
+          break;
+        }
       }
     }
     return "-1";
