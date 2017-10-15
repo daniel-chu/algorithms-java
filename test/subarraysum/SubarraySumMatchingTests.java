@@ -25,6 +25,9 @@ public class SubarraySumMatchingTests {
     int arr4AllLargerThanSum[] = {999, 999, 999, 999, 888};
     int arr4SumToFind = 500;
 
+    int arr5LastIndexIsAnswer[] = {5, 10, 15, 5, 7};
+    int arr5SumToFind = 12;
+
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arr1, arr1SumToFind), "2 4");
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arr2, arr2SumToFind), "1 5");
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arr3, arr3SumToFind1), "1 3");
@@ -35,5 +38,8 @@ public class SubarraySumMatchingTests {
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arr4AllLargerThanSum, arr4SumToFind), "-1");
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(new int[0], 1), "Invalid input, array is empty.");
     Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arrOfOneLength, 5), "1 1");
+
+    Assert.assertEquals(SubarraySumMatching.findFirstSubarrayWithSum(arr5LastIndexIsAnswer,
+            arr5SumToFind), "4 5");
   }
 }

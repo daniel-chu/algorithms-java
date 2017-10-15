@@ -19,23 +19,21 @@ public class SubarraySumMatching {
     while(end < arr.length && start < arr.length) {
       if(curSum == sum) {
         return ++start + " " + ++end;
-      } else if(curSum > sum) {
+      }
+
+      if(start == arr.length - 1 || end == arr.length - 1) {
+        break;
+      }
+
+      if (curSum > sum) {
         if(start == end) {
-          if(start < arr.length - 1) {
-            ++end;
-            curSum = arr[++start];
-          } else {
-            break;
-          }
+          ++end;
+          curSum = arr[++start];
         } else {
           curSum = curSum - arr[start++];
         }
       } else {
-        if(end < arr.length - 1) {
-          curSum = curSum + arr[++end];
-        } else {
-          break;
-        }
+        curSum = curSum + arr[++end];
       }
     }
     return "-1";
