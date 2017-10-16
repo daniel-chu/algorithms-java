@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by danielchu on 10/16/17.
  */
-public class MaxHeapInt extends PriorityQueue {
+public class MaxHeapInt extends PriorityQueue<Integer> {
 
   public MaxHeapInt() {
     super(new Comparator<Integer>() {

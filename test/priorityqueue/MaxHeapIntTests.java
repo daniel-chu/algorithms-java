@@ -16,23 +16,23 @@ public class MaxHeapIntTests {
 
     maxHeap.add(5);
     Assert.assertEquals(maxHeap.getLength(), 1);
-    Assert.assertEquals(maxHeap.peek(), 5);
+    Assert.assertEquals(maxHeap.peek(), Integer.valueOf(5));
 
     maxHeap.add(-1);
     Assert.assertEquals(maxHeap.getLength(), 2);
-    Assert.assertEquals(maxHeap.peek(), 5);
+    Assert.assertEquals(maxHeap.peek(), Integer.valueOf(5));
 
     maxHeap.add(100);
     Assert.assertEquals(maxHeap.getLength(), 3);
-    Assert.assertEquals(maxHeap.peek(), 100);
+    Assert.assertEquals(maxHeap.peek(), Integer.valueOf(100));
 
     maxHeap.add(-5);
     Assert.assertEquals(maxHeap.getLength(), 4);
-    Assert.assertEquals(maxHeap.peek(), 100);
+    Assert.assertEquals(maxHeap.peek(), Integer.valueOf(100));
 
-    Assert.assertEquals(maxHeap.pop(), 100);
-    Assert.assertEquals(maxHeap.pop(), 5);
-    Assert.assertEquals(maxHeap.pop(), -1);
-    Assert.assertEquals(maxHeap.pop(), -5);
+    Assert.assertEquals(maxHeap.pop(), Integer.valueOf(100));
+    Assert.assertEquals(maxHeap.pop(), Integer.valueOf(5));
+    Assert.assertEquals(maxHeap.pop(), Integer.valueOf(-1));
+    Assert.assertEquals(maxHeap.pop(), Integer.valueOf(-5));
   }
 }

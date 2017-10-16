@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by danielchu on 10/15/17.
  */
-public class MinHeapInt extends PriorityQueue {
+public class MinHeapInt extends PriorityQueue<Integer> {
 
   public MinHeapInt() {
     super(new Comparator<Integer>() {
