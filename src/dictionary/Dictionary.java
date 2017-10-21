@@ -1,10 +1,14 @@
 package dictionary;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
  * Class that stores words using a trie data structure. Only single words consisting of the 26
- * characters in the english alhabet can be stored.
+ * characters in the english alphabet can be stored.
  */
 public class Dictionary {
 
@@ -36,6 +40,21 @@ public class Dictionary {
     root = new DictNode();
   }
 
+  // adds all words from a text file into the dictionary (text file must be one word per line)
+  public void addFromFile(String fileName) {
+    try {
+      BufferedReader reader = new BufferedReader(new FileReader(fileName));
+      String line;
+      while ((line = reader.readLine()) != null) {
+        this.add(line);
+      }
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
   public void add(String s) {
     DictNode curNode = root;
     DictNode[] children = curNode.children;
@@ -65,7 +84,7 @@ public class Dictionary {
       if (children[index] == null) {
         return;
       } else {
-        if(children[index].hasNoChildren()) {
+        if (children[index].hasNoChildren()) {
           children[index] = null;
           return;
         } else {
@@ -92,6 +111,5 @@ public class Dictionary {
     }
     return curNode.isLeaf;
   }
-
 
 }
