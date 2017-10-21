@@ -67,7 +67,7 @@ public class Dictionary {
       curNode = children[index];
       children = curNode.children;
     }
-    if (curNode != null) {
+    if (curNode != root) {
       curNode.setIsLeaf(true);
     } else {
       throw new IllegalArgumentException("Cannot add empty string to the Dictionary.");

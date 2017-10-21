@@ -32,6 +32,12 @@ public class DictionaryTests {
     Assert.assertTrue(dict2.contains("help"));
   }
 
+  @Test(expectedExceptions = IllegalArgumentException.class,
+          expectedExceptionsMessageRegExp = "Cannot add empty string to the Dictionary.")
+  public void testAddEmptyString() {
+    dict1.add("");
+  }
+
   @Test
   public void testContains() {
     Assert.assertFalse(dict1.contains("gre"));
